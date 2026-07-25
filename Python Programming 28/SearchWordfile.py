@@ -3,12 +3,14 @@ def main():
         fobj = open("Demo.txt", "r")
         print("File gets Open")
 
-        Count = 0
+        Word = input("Enter Word to Search : ")
 
-        for l in fobj:
-            Count = Count + 1
+        Data = fobj.read()
 
-        print("Number of Line :", Count)
+        if Word in Data:
+            print("Word Found")
+        else:
+            print("Word Not Found")
 
         fobj.close()
 

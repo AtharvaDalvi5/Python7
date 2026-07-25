@@ -3,12 +3,11 @@ def main():
         fobj = open("Demo.txt", "r")
         print("File gets Open")
 
-        Count = 0
+        Data = fobj.read()
 
-        for l in fobj:
-            Count = Count + 1
+        Words = Data.split()
 
-        print("Number of Line :", Count)
+        print("Total Number of Words :", len(Words))
 
         fobj.close()
 
